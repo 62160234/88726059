@@ -1,0 +1,20 @@
+
+<B>2. โปรแกรม สูตรคูณ - multi.html</B> <br><br>
+<script>
+    // function 
+    function multitable(n) {//ฟังก์ชั่นใช้ทำตัวคูณ n คือเลขที่เรารับค่ามา
+        // กำหนดให้ตัวแปร div อ้างถึงแทกที่กำหนด id เป็น disp
+        div = document.getElementById('disp');
+        div.innerHTML = ""; // กำหนดค่าว่างให้แอททริบิวท์ innerHTML ให้setผลลัพธ์ใหม่แต่ละรอบ
+        for (i = 1; i <= 12; i++) {
+            div.innerHTML += n + " x " + i + " = " + (n * i) + "<br>"; 
+        }
+    }
+</script>
+
+<body>
+    
+    <input type="text" placeholder="สูตรคูณแม่ X" oninput="multitable(this.value);">
+    <div id="disp"></div>
+    
+</body>

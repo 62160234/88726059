@@ -1,0 +1,64 @@
+<script>
+    alert("Hello World!");
+
+    // ตัวแปร, 
+    x = 5;
+    y = 6;
+    alert(x + "+" + y + "=" + (x + y));
+    alert("5" + y);
+    alert(x + "6");
+
+    // document.write()
+    document.write("<h1>");
+    document.write(x + "+" + y + "=" + (x + y));
+    document.write("</h1>");
+
+    // for loop พิมพ์สูตรคูณ
+    n = 2;
+    for (i = 1; i <= 12; i++) {
+        document.write(n + "x" + i + "=" + (n * i));
+        document.write("<br>");
+    }
+
+    // สุ่มตัวเลขจำนวนเต็ม 0-99
+    rn = Math.floor(Math.random() * 100);
+    document.write(rn);
+</script>
+
+<hr>
+
+<style>
+    * {
+        border: 1px dotted gray;
+    }
+</style>
+
+<script>
+    // function 
+    function multi(n) {
+        // กำหนดให้ตัวแปร div อ้างถึงแทกที่กำหนด id เป็น disp
+        div = document.getElementById('disp');
+        div.innerHTML = ""; // กำหนดค่าว่างให้แอททริบิวท์ innerHTML
+        for (i = 1; i <= 12; i++) {
+            div.innerHTML += n + "x" + i + "=" + (n * i) + "<br>";
+        }
+    }
+</script>
+
+<!-- 
+    onEvent="JavaScriptCode" -- จะเป็นคำสั่งเดียว หรือ เรียก function
+    document.getElementById('disp') -- ใช้อ้างถึง tag ที่ระบุแอททริบิวท์ id
+    .innerHTML -- ค่าข้อมูลที่อยู่ระหว่างแทกเปิดและแทกปิด
+    .value -- ค่าข้อมูลของแทกประเภท input
+    this -- อ้างถึงตัวมันเอง
+-->
+
+<!-- เมื่อเกิดเหตุการณ์ keyup ให้เรียกฟังก์ชั่น multi พร้อมส่งค่าของ input text -->
+<input type="text" onkeyup="multi(this.value);">
+<div id="disp">Default text</div>
+<button onclick="getElementById('disp').innerHTML='';">Clear div</button>
+
+<!-- 
+    โค๊ดนี้ เมื่อพิมพ์ตัวอักษรแต่ละตัวใน input text จะนำค่าตัวอักษระไปกำหนดให้tag ที่ระบุแอททริบิวท์ id เป็น disp
+    <input type="text" onkeyup="getElementById('disp').innerHTML += this.value">
+-->

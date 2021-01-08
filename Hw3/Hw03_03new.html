@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi.html</title>
+</head>
+ 
+<body>
+    <h5>2. โปรแกรม สูตรคูณ - multi.html</h5>
+    <input type="text" id="number" placeholder=" สูตรคูณแม่ X " onkeyup="show(); ">
+    <div id="disp"></div>
+ 
+    <script>
+        html = "";
+ 
+        function show() {
+            html = "<table>";
+            n = document.getElementById('number').value;
+            for (i = 1; i <= 12; i++) {
+                html += "<tr>";
+                html += "<td>" + n + "</td>";
+                html += "<td>" + "x" + "</td>";
+                html += "<td>" + i + "</td>";
+                html += "<td>" + "=" + "</td>";
+                html += "<td>" + (n * i) + "</td>";
+                html += "</tr>";
+            }
+            html += "</table>";
+            document.getElementById('disp').innerHTML = html;
+        }
+    </script>
+</body>
+ 
+</html>
+ 

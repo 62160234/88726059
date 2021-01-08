@@ -1,0 +1,76 @@
+<center>
+    <h1>ลองสุ่มตัวเลข</h1>
+    <style>
+        body{
+            background-color: rgb(236, 144, 255);
+            font-family: arial;
+    }
+    button {
+            background-color: #40b9e9; /* Green */
+            border: none;
+            color: rgb(136, 70, 190);
+            padding: 2px 3px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+    <body>
+    <script>
+        
+        rn = Math.floor(Math.random()*100); 
+        document.write(rn)
+        alert(rn);
+        function guess(){
+            num = document.getElementById('number')
+            hist = document.getElementById('hist')
+            result = document.getElementById('result')
+           alert(num.value)
+           hist.innerHTML += num.value +" "
+    
+            if(num.value == rn){
+                result.innerHTML = "ถูกต้อง"
+            }
+            if(num.value < rn){
+                result.innerHTML = "น้อยไป"
+            }
+            if(num.value > rn){
+                result.innerHTML = "มากไป"
+            }
+    
+        }
+        function startOver(){
+            num = document.getElementById('number').value=""
+            hist = document.getElementById('hist').innerHTML=""
+            result = document.getElementById('result').innerHTML=""
+            rn = Math.floor(Math.random()*100);
+        }
+     </script>    
+     
+    <input type="Integer" placeholder="" id="number">
+    <button onclick="guess()">Enter</button>
+    <p id="hist"></p>
+    <p id="result"></p>   
+    <button onclick="startOver()">Restart</button>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th>จัดทำโดย</th>
+            <th>62160117</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light">
+            <td>นางสาว&nbsp;ฐิติรัตน์</td>
+            <td>&nbsp;&nbsp;แสงกิตติไพบูลย์</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </body>
+     
+</center>

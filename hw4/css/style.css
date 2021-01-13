@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'Font';
+  src:url('CTS-Rattikal.ttf') format('opentype');
+
+}
+.a1 {
+    margin: auto;
+    width: 30%;
+    border: 2px solid white;
+    background:rgb(0, 30, 70);
+    padding: 10px;
+    font-family: "Font", monospace;
+    font-size:18px;
+    color: rgb(251, 255, 0);
+}
+
+
+#b1 {
+   margin: auto;
+    width: 40%;
+}
+html { 
+    background: url(888.jpg) no-repeat center fixed; 
+    background-size: cover;
+}
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+.button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+  .button:hover {background-color: #d410d4}
+  
+  .button:active {
+    background-color: #00b300;
+    transform: translateY(4px);
+  }
+
+  .button1 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #4CAF50;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .button1:hover {background-color: #d410d4}
+  
+  .button1:active {
+    background-color: #00b300;
+    transform: translateY(4px);
+  }
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #eb0707;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+  .button3:hover {background-color: #cc0000}
+  
+  .button3:active {
+    background-color: #b30000;
+    transform: translateY(4px);
+  }
